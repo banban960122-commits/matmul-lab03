@@ -16,3 +16,15 @@ python benchmark.py --table --output results
 `results/rounds.csv` 是本机全部 90 条正式轮次记录。`results/summary.csv` 保存 A 组 5 轮中位数、B 组 5 轮中位数、合并 10 轮中位数、A 组加速倍数及 A/B 偏差。若任一格偏差达到 5%，基准仍保留 CSV 并以退出码 2 结束。
 
 提示词见 `prompts.md`，第一轮生成的核心草稿见 `draft_v1.md`。用于构建和计时的是目录中的最终代码。
+
+## 本机重复运行
+
+自动调度下的完整运行对照在 results/repeat1_automatic_summary.csv 和 results/repeat2_automatic_summary.csv。正式结果固定到 Windows 逻辑处理器 15，以第二次完整运行作为主表。
+
+```powershell
+[System.Diagnostics.Process]::GetCurrentProcess().ProcessorAffinity = [IntPtr]32768
+python benchmark.py --build --output repeat_a
+python benchmark.py --output repeat_b
+```
+
+亲和掩码 0x8000 对应本机逻辑处理器 15，复现时应按机器的可用处理器设置。results/repeat_compare.csv 对照两次完整运行的 10 轮中位数。repeat1/2 的逐轮记录以同名前缀保存，run_notes.json 标注主表与最大偏差。
