@@ -1,0 +1,4 @@
+N=1000 nested reference=259.71102233214236
+   1000  Python  259.71102233214236  rel.err=0.000e+00
+FAIL: C build rejected: unoptimized; expected optimized
+exit=1

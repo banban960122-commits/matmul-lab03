@@ -1,0 +1,10 @@
+test_01_empty (__main__.TestDot.test_01_empty) ... ok
+test_02_single (__main__.TestDot.test_02_single) ... ok
+test_03_mismatch (__main__.TestDot.test_03_mismatch) ... ok
+test_04_zeros (__main__.TestDot.test_04_zeros) ... ok
+test_05_nan (__main__.TestDot.test_05_nan) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.753s
+
+OK

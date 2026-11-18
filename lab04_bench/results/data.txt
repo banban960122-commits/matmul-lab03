@@ -1,0 +1,4 @@
+N=   1000       8000 bytes/file   seed=20262118
+N=  10000      80000 bytes/file   seed=20271118
+N= 100000     800000 bytes/file   seed=20361118
+N=1000000    8000000 bytes/file   seed=21261118

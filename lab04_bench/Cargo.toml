@@ -1,0 +1,8 @@
+[package]
+name = "lab04-bench"
+version = "1.0.0"
+edition = "2021"
+
+[[bin]]
+name = "dot_rust"
+path = "dot.rs"

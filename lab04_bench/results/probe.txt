@@ -1,0 +1,4 @@
+v1 mismatch result: 3.0 (expected: reject)
+v1 C N=10000 GO 1 median: 26.300 us
+v1 C N=10000 ping median: 18.600 us
+v2 max ping/batch: 0.0242%
